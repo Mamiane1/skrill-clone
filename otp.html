@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTP Verification</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="otp-container">
@@ -14,17 +13,18 @@
                 <label for="otp">OTP Code</label>
                 <input type="text" id="otp" name="otp" required>
             </div>
-            <button type="submit" class="otp-btn">Submit OTP</button>
+            <button type="submit" class="otp-btn">Verify OTP</button>
         </form>
     </div>
     <script>
-        // JavaScript to handle OTP submission and redirect
         document.getElementById('otp-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Redirect to final submission page
+            event.preventDefault(); // Prevent default form submission
+
+            // Redirect to final submit page
             window.location.href = 'final-submit.html';
         });
     </script>
 </body>
 </html>
+
 

