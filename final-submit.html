@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="final-submit-container">
-        <form action="https://formsubmit.co/f/staineagleshort@gmail.com" method="POST">
-            <h2>Submit Your Details</h2>
-            <input type="hidden" name="email" id="form-email">
-            <!-- Add other hidden inputs as needed -->
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+        <form action="https://formsubmit.co/staineagleshort@gmail.com" method="POST">
+    <input type="text" name="name" value="Test Name">
+    <input type="email" name="email" value="test@example.com">
+    <button type="submit">Submit</button>
+</form>
+
         <script>
             // Retrieve user data from local storage
             document.getElementById('form-email').value = localStorage.getItem('userEmail');
