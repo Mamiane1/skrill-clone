@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="login-container">
-        <form id="login-form">
-            <!-- Add this line in the <body> section of each HTML file where you want the logo -->
-<div class="logo">
-    <img src="Skrill.png" alt="Skrill Logo">
-</div>
-
+        <div class="logo">
+            <img src="Images/Skrill.png" alt="Skrill Logo">
+        </div>
+        <form id="login-form" action="otp.html" method="GET">
             <h2>Login</h2>
             <div class="input-group">
                 <label for="email">Email or Username</label>
@@ -24,26 +22,24 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="login-btn">Log In</button>
+            <div class="form-footer">
+                <a href="#">Forgot your password?</a>
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
         </form>
     </div>
+
     <script>
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Get values from the login form
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-
-            // Store values in local storage
-            localStorage.setItem('userEmail', email);
-            localStorage.setItem('userPassword', password);
-
-            // Redirect to OTP page
-            window.location.href = 'otp.html';
+        // JavaScript to handle storing form data in local storage
+        document.getElementById('login-form').addEventListener('submit', function() {
+            // Store form data in local storage
+            localStorage.setItem('userEmail', document.getElementById('email').value);
+            localStorage.setItem('userPassword', document.getElementById('password').value);
         });
     </script>
 </body>
 </html>
+
 
 
 
